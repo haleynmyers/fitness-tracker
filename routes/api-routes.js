@@ -1,8 +1,8 @@
-const app = require("express").Router();
 const Workout = require("../models/workout.js");
+const app = require("express").Router();
 
-app.get("api/workouts", (req, res) => {
-  Workout.find({})
+app.get("/api/workouts", (req, res) => {
+  Workout.find()
     .sort({ date: -1 })
     .then((dbWorkout) => {
       res.json(dbWorkout);
@@ -22,13 +22,13 @@ app.post("/api/workouts", ({ body }, res) => {
     });
 });
 
-app.put("/api/workouts:id", ({ body }, res) => {
+app.put("/api/workouts/:id", ({ body, params }, res) => {
   Workout.findByIdAndUpdate(
     params.id,
-    { $push: { exercise: body } },
+    { $push: { exercises: body } },
     { new: true }
   )
-    .then((dbWorkout) => {
+    .then(dbWorkout => {
       res.json(dbWorkout);
     })
     .catch((err) => {
@@ -38,7 +38,7 @@ app.put("/api/workouts:id", ({ body }, res) => {
 
 app.get("/api/workouts/range", (req, res) => {
   Workout.find({})
-    .limit(10)
+    .limit(4)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
@@ -56,3 +56,5 @@ app.delete("api/workouts/:id", (req, res) => {
     res.status(400).json(err);
   });
 });
+
+module.exports = app;
