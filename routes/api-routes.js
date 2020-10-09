@@ -3,7 +3,6 @@ const app = require("express").Router();
 
 app.get("/api/workouts", (req, res) => {
   Workout.find()
-    .sort({ date: -1 })
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
@@ -38,23 +37,13 @@ app.put("/api/workouts/:id", ({ body, params }, res) => {
 
 app.get("/api/workouts/range", (req, res) => {
   Workout.find({})
-    .limit(4)
+    .limit(9)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
     .catch((err) => {
       res.status(400).json(err);
     });
-});
-
-app.delete("api/workouts/:id", (req, res) => {
-  Workout.findByIdAndDelete(params.id)
-  .then((dbWorkout) => {
-    res.json(dbWorkout);
-  })
-  .catch((err) => {
-    res.status(400).json(err);
-  });
 });
 
 module.exports = app;
