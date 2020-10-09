@@ -15,7 +15,7 @@ Keep track of each exercise in your workout by clicking the "New Workout" button
 * [Acknowledgements](#acknowledgements)
 
 ## Deployed Link
-[Deployed on Heroku](https://intense-lake-55087.herokuapp.com/)
+[Deployed on Heroku](https://warm-forest-23524.herokuapp.com/)
 
 ## Installation
 If you wish to clone the code locally, you will need to run
