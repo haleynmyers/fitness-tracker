@@ -1,57 +1,41 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Fitness Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Description
+Keep track of each exercise in your workout by clicking the "New Workout" button at the start of each session. You enter the information into the form, and if you want to add another exercise to that workout session, choose "Add Exercise." When you have entered all the exercised from that session, choose "Complete" to send that whole workout to your stats page. However, you can add to your most recent workout by clicking "Continue Workout" from the home page. Click the "Dashboard" link at the top of the page to view your stats.
 
-## User Story
+![Fitness Tracker Demo](./public/assets/fitness-tracker-demo.gif)
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Table of Contents
+* [Deployed Link](#deployed-link)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Author](#author)
+* [Questions](#questions)
+* [Acknowledgements](#acknowledgements)
 
-## Business Context
+## Deployed Link
+[Deployed on Heroku](https://intense-lake-55087.herokuapp.com/)
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+## Installation
+If you wish to clone the code locally, you will need to run
+`npm install` to install the dependecies listen in the package.json. 
+Run the seeds file to populate the database with `npm run seed`
 
-## Acceptance Criteria
+## Usage
+Used the deployed site provided above.
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+## License
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-The user should be able to:
+## Author
+Haley Myers
 
-  * Add exercises to a previous workout plan.
+## Questions
+Please email [haleynmyers@gmail.com](mailto:haleynmyers@gmail.com)
 
-  * Add new exercises to a new workout plan.
+## Acknowledgements
+Puplic files and seeds.js provided by Trilogy
 
-  * View the combined weight of multiple exercises on the `stats` page.
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
-
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
