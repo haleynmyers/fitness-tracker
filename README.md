@@ -34,8 +34,3 @@ Haley Myers
 ## Questions
 Please email [haleynmyers@gmail.com](mailto:haleynmyers@gmail.com)
 
-## Acknowledgements
-Puplic files and seeds.js provided by Trilogy
-
-
-
